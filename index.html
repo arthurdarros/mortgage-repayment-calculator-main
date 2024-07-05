@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Mortgage repayment calculator</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -15,41 +15,59 @@
   </style>
 </head>
 <body>
+  <div class="cal-container">
+  <h1>Mortgage Calculator</h1>
+  <p>Clear All</p>
 
-  Mortgage Calculator
-  Clear All
+  <h2>Mortgage Amount</h2>
+    <div class="input-group">
+      <span class="input-group-addon">R$</span>
+      <input type="number" id="amount">
+    </div>
+  <h2>Mortgage Term</h2>
+    <div class="input-group">
+      <input type="number" id="term">
+      <span class="input-group-addon-right">years</span>
+    </div>
+    <h2>Interest Rate</h2>
+    <div class="input-group">
+      <input type="number" id="rate">
+      <span class="input-group-addon-right">%</span>
+    </div>
 
-  Mortgage Amount
-
-  Mortgage Term
-
-  Interest Rate
-
-  Mortgage Type
-  Repayment
-  Interest Only
-
-  Calculate Repayments
+  <h2>Mortgage Type</h2>
+  <div class="radio-group">
+    <div class="radio-wrapper">
+      <input type="radio" name="mortgage" value="1" id="repay">
+      <label for="repay">Repayments</label>
+    </div>
+    <div class="radio-wrapper">
+      <input type="radio" name="mortgage" value="2" id="intOnly">
+      <label for="intOnly">Interest Only</label>
+    </div>
+  </div>
+  <input type="button" value="Calculate Repayments" id="calc-button">
+  </div>
 
   <!-- Empty results start -->
+  <div>
+  <h1>Results shown here</h1>
 
-  Results shown here
-
-  Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.
-
+  <p>Complete the form and click “calculate repayments” to see what 
+  your monthly repayments would be.</p>
+  </div>
   <!-- Empty results end -->
 
   <!-- Completed results start -->
 
-  Your results
+  <!--Your results
 
   Your results are shown below based on the information you provided. 
   To adjust the results, edit the form and click “calculate repayments” again.
 
   Your monthly repayments
 
-  Total you'll repay over the term
+  Total you'll repay over the term-->
 
   <!-- Completed results end -->
   
