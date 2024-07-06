@@ -7,34 +7,31 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
   <title>Frontend Mentor | Mortgage repayment calculator</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
 <body>
-  <div class="cal-container">
-  <h1>Mortgage Calculator</h1>
-  <p>Clear All</p>
-
-  <h2>Mortgage Amount</h2>
-    <div class="input-group">
-      <span class="input-group-addon">R$</span>
-      <input type="number" id="amount">
-    </div>
-  <h2>Mortgage Term</h2>
-    <div class="input-group">
-      <input type="number" id="term">
-      <span class="input-group-addon-right">years</span>
-    </div>
-    <h2>Interest Rate</h2>
-    <div class="input-group">
-      <input type="number" id="rate">
-      <span class="input-group-addon-right">%</span>
-    </div>
-
+  <div class="main-container">
+    <div class="cal-container">
+      <div class="title">
+        <h1>Mortgage Calculator</h1>
+        <p>Clear All</p>
+      </div>
+      <h2>Mortgage Amount</h2>
+      <div class="input-group">
+        <span class="input-group-addon">R$</span>
+        <input type="number" id="amount">
+      </div>
+      <h2>Mortgage Term</h2>
+      <div id="inputs-right">
+        <div class="input-group-right">
+          <input type="number" id="term">
+          <span class="input-group-addon-right">years</span>
+        </div>
+        <h2>Interest Rate</h2>
+        <div class="input-group-right">
+          <input type="number" id="rate">
+          <span class="input-group-addon-right">%</span>
+        </div>
+      </div>
   <h2>Mortgage Type</h2>
   <div class="radio-group">
     <div class="radio-wrapper">
@@ -50,12 +47,14 @@
   </div>
 
   <!-- Empty results start -->
-  <div>
-  <h1>Results shown here</h1>
+  <div class="res-container">
+    <img src="assets/images/illustration-empty.svg">
+    <h1>Results shown here</h1>
 
-  <p>Complete the form and click “calculate repayments” to see what 
-  your monthly repayments would be.</p>
+    <p>Complete the form and click “calculate repayments” to see what 
+    your monthly repayments would be.</p>
   </div>
+</div>
   <!-- Empty results end -->
 
   <!-- Completed results start -->
@@ -73,7 +72,7 @@
   
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+    Coded by <a href="#">Arthur Stein Darros</a>.
   </div>
 </body>
 </html>
