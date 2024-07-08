@@ -18,20 +18,22 @@
       <h2>Mortgage Amount</h2>
       <div class="input-group">
         <span class="input-group-addon">R$</span>
-        <input type="number" id="amount">
+        <input type="number" id="amount" min="1">
       </div>
-      <h2>Mortgage Term</h2>
-      <div id="inputs-right">
-        <div class="input-group-right">
-          <input type="number" id="term">
-          <span class="input-group-addon-right">years</span>
+        <div class="inputs-right">
+          <h2>Mortgage Term</h2>
+          <div class="input-group-right">
+            <input type="number" id="term" min="1" max="80">
+            <span class="input-group-addon-right">years</span>
+          </div>
         </div>
-        <h2>Interest Rate</h2>
-        <div class="input-group-right">
-          <input type="number" id="rate">
-          <span class="input-group-addon-right">%</span>
+        <div class="inputs-right">
+          <h2>Interest Rate</h2>
+          <div class="input-group-right">
+            <input type="number" id="rate" max="100" min="1">
+            <span class="input-group-addon-right">%</span>
+          </div>
         </div>
-      </div>
   <h2>Mortgage Type</h2>
   <div class="radio-group">
     <div class="radio-wrapper">
@@ -43,7 +45,7 @@
       <label for="intOnly">Interest Only</label>
     </div>
   </div>
-  <input type="button" value="Calculate Repayments" id="calc-button">
+  <input type="button" value="Calculate Repayments" id="calc-button" onclick="calculate()">
   </div>
 
   <!-- Empty results start -->
@@ -51,7 +53,7 @@
     <img src="assets/images/illustration-empty.svg">
     <h1>Results shown here</h1>
 
-    <p>Complete the form and click “calculate repayments” to see what 
+    <p id="result">Complete the form and click “calculate repayments” to see what 
     your monthly repayments would be.</p>
   </div>
 </div>
@@ -69,7 +71,7 @@
   Total you'll repay over the term-->
 
   <!-- Completed results end -->
-  
+  <script src="js/script.js"></script>
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
     Coded by <a href="#">Arthur Stein Darros</a>.
